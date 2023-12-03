@@ -18,7 +18,7 @@ depends=('python-m2crypto'
 	 'python-bpylist2'
 	 'python-pygments'
 	 'usbmuxd'
-	 'python-setuptools')
+	 'python-setuptools') ### add this line ###
 makedepends=('git')
 source=("pymobiledevice::git+$url.git#branch=py3")
 md5sums=('SKIP')
@@ -32,7 +32,7 @@ pkgver() {
 
 package() {
 	cd "$srcdir/${pkgname%-git}"
- 	cp -r pymobiledevice pymobiledevice3
+ 	cp -r pymobiledevice pymobiledevice3 ### add this line ###
 	python setup.py install --root="$pkgdir"
 }
  
