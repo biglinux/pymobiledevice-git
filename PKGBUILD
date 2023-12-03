@@ -32,6 +32,7 @@ pkgver() {
 
 package() {
 	cd "$srcdir/${pkgname%-git}"
+ 	cp -r pymobiledevice pymobiledevice3
 	python setup.py install --root="$pkgdir"
 }
  
